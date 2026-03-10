@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "data": {
+    "token": "dummy-jwt-token-54321",
+    "user": {
+      "id": 2,
+      "username": "user",
+      "name": "개발자",
+      "role": "DEVELOPER"
+    },
+    "permissions": [
+      {
+        "path": "/",
+        "actions": [
+          "READ"
+        ]
+      },
+      {
+        "path": "/settings/profile",
+        "actions": [
+          "READ"
+        ]
+      },
+      {
+        "path": "/content/notice",
+        "actions": [
+          "READ",
+          "CREATE",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ]
+  }
+}

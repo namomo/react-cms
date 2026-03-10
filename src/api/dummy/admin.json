@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "data": {
+    "token": "dummy-jwt-token-12345",
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "name": "관리자",
+      "role": "SUPER_ADMIN"
+    },
+    "permissions": [
+      {
+        "path": "/",
+        "actions": [
+          "READ",
+          "UPDATE"
+        ]
+      },
+      {
+        "path": "/settings/profile",
+        "actions": [
+          "READ",
+          "CREATE",
+          "UPDATE",
+          "DELETE"
+        ]
+      },
+      {
+        "path": "/settings/permissions",
+        "actions": [
+          "READ",
+          "CREATE",
+          "UPDATE",
+          "DELETE"
+        ]
+      },
+      {
+        "path": "/content/notice",
+        "actions": [
+          "READ",
+          "CREATE",
+          "UPDATE",
+          "DELETE"
+        ]
+      }
+    ]
+  }
+}

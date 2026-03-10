@@ -1,0 +1,27 @@
+
+> react-cms@1.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m??[39m 64 modules transformed.
+??[39m Build failed in 464ms
+error during build:
+src/services/auth-service.js (1:9): "request" is not exported by "src/api/api-client.js", imported by "src/services/auth-service.js".
+file: C:/work/github/react-cms/src/services/auth-service.js:1:9
+
+1: import { request, dummyRequest } from '../api/api-client';
+            ^
+2: 
+3: // 媛쒕퀎 ?쒕퉬???듭떊 紐⑤뱶 ?ㅼ쐞移?(媛쒕컻 以? true, 諛깆뿏???곕룞 ?꾨즺 ?? false)
+
+    at getRollupError (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Module.error (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:17040:16)
+    at Module.traceVariable (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:17452:29)
+    at ModuleScope.findVariable (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:15070:39)
+    at ReturnValueScope.findVariable (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at FunctionBodyScope.findVariable (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at Identifier.bind (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:5447:40)
+    at CallExpression.bind (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:2829:23)
+    at CallExpression.bind (file:///C:/work/github/react-cms/node_modules/rollup/dist/es/shared/node-entry.js:12179:15)

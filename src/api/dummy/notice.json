@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "noticeId": "NTC-2026-001",
+    "title": "[안내] 맞춤형 공지사항 시스템 오픈",
+    "content": "회원님의 맞춤형 공지사항입니다. 이 모달은 Service Layer와 의존성 주입 패턴을 사용하여 API를 연동한 샘플 구현체(Reference)입니다.\n\n해당 공지사항은 /api/notice 엔드포인트를 모방한 mock 데이터입니다."
+  }
+}
