@@ -23,7 +23,7 @@
 
 - **`api-client.js` 백엔드 클라이언트**: 순수하게 `fetch`를 수행하는 공통 `request` 함수와, 데이터를 외부에서 받아서 Promise 딜레이 후 반환하는 `dummyRequest` 함수만 존재합니다. 이 파일은 특정 주소나 더미 파일의 경로를 하드코딩하지 않아 의존성이 완벽히 분리되어 있습니다.
 - **Service Modules (`src/services/`)**: 기능별(예: `auth-service.js`, `notice-service.js`)로 API 호출 계층을 마련했습니다.
-- **개별 통신 제어 스위치 (`USE_MOCK`)**: 서비스 파일 내부에 이 스위치를 두어, 서버 개발 진척도에 따라 해당 API만 개별적으로 실서버(`request`)로 전환하거나 더미(`dummyRequest`)로 남겨둘 수 있습니다. 
+- **개별 통신 제어 스위치 (`USE_MOCK`)**: 서비스 파일 내부에 이 스위치를 두어, 서버 개발 진척도에 따라 해당 API만 개별적으로 실서버(`request`)로 전환하거나 더미(`dummyRequest`)로 남겨둘 수 있습니다.
 - **의존성 주입 (Dependency Injection)**: 더미를 반환해야 할 때, 필요한 JSON 데이터(`notice.json` 등)는 해당 도메인의 Service 모듈이 직접 Import한 뒤 `dummyRequest`의 매개변수로 주입합니다. 이를 통해 중앙 `api-client`를 거대해지지 않도록 방어합니다.
 
 ### 3. 상태 관리 및 세션 유지 (Token Verification)
@@ -58,3 +58,10 @@
    ```bash
    npm run build
    ```
+
+4. 로그인
+* 인증 방식: 패스워드 검증 생략 (Any-string 입력 허용)
+* 계정별 접근 제어:
+    * admin: Full Access (전체 메뉴)
+    * user: Restricted Access (일부 메뉴 진입 차단)
+
