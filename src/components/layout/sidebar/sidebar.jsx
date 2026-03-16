@@ -1,22 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-
-const menuData = [
-  { title: '대시보드', path: '/' },
-  {
-    title: '설정',
-    children: [
-      { title: '사용자 정보', path: '/settings/profile' },
-      { title: '권한 관리', path: '/settings/permissions' },
-    ]
-  },
-  {
-    title: '콘텐츠',
-    children: [
-      { title: '아이템 관리', path: '/content/items' },
-    ]
-  }
-];
+import { appMenus } from '../../../config/menu';
 
 const Sidebar = () => {
   const location = useLocation();
@@ -28,7 +12,7 @@ const Sidebar = () => {
 
     setOpenMenus(prev => {
       const next = { ...prev };
-      menuData.forEach(menu => {
+      appMenus.forEach(menu => {
         if (menu.children) {
           const hasActiveChild = menu.children.some(
             child => currentPath === child.path || currentPath.startsWith(`${child.path}/`)
@@ -53,7 +37,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       <nav>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-          {menuData.map((menu) => {
+          {appMenus.map((menu) => {
             // 하위 메뉴가 있는 경우 (아코디언 형태)
             if (menu.children) {
               const isOpen = openMenus[menu.title];
